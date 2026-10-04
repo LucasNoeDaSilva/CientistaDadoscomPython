@@ -1,0 +1,35 @@
+carro =["camaro","onix","fusca"];
+oleo =[];
+quantidade =list(range(10));
+especificao = ["montadora","ano de fabricacao", "ano de lancamento", "valor"];
+nome =list("camaro");
+nome2 = ['camaro'];
+print(carro);
+print(quantidade);
+print(especificao);
+print(nome);
+print(nome2);
+print(especificao[0]);
+print(nome[:2]);
+print(nome[0:3]);
+print(nome[0::2]);
+print(nome[0:3:2]);
+print(nome[::]);
+print(nome[::-1]);
+
+for detalhe in especificao:
+    print(detalhe);
+
+for i,car in enumerate(carro):
+    print({i},{car});
+
+numeros = [0,1,2,3,4,5,6,7,8,9,10];
+pares =[];
+
+for i in numeros:
+    if(i % 2 ==0):
+        pares.append(i);
+
+print(pares)
+
+    
