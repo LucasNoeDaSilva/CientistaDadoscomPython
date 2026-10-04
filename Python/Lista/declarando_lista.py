@@ -30,6 +30,9 @@ for i in numeros:
     if(i % 2 ==0):
         pares.append(i);
 
-print(pares)
+print(pares);
+numeros2 =[10,11,12,13,14,15,16,17,18,19,20];
+pares2=[i for i in numeros2 if i % 2==0];
+print(pares2);
 
     
