@@ -1,0 +1,22 @@
+nomes =[];
+nomes.append("lucas");
+nomes.append("Julia");
+print(nomes);
+nomes.clear();
+print(nomes);
+nomes.append("lucas");
+nomes.append("Julia");
+nomes2 = nomes.copy();
+print(nomes2);
+nomes2.append("lucas");
+print(nomes2.count("lucas"));
+nomes.extend(nomes2);
+print(nomes);
+print(nomes.index("Julia"))
+print(nomes);
+nomes.pop();
+nomes.remove("lucas");
+print(nomes);
+nomes.sort();
+print(nomes);
+print(len(nomes));
