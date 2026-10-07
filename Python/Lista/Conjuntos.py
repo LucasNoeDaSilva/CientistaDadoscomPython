@@ -1,0 +1,34 @@
+#remove duplicados
+print(set([1,2,3,4,5,6,1]));
+conjuntos ={1,2,3,4,5,6,7,8,1};
+print(conjuntos);
+conjuntos = list(conjuntos);
+print(conjuntos[0]);
+
+conjuntoa =set((1,2,3,4,5,1));
+conjuntob = set((4,5,10,11,12));
+conjuntoc ={100,122,133};
+print(conjuntoa.union(conjuntob));
+print(conjuntoa.intersection(conjuntob));
+print(conjuntoa.difference(conjuntob));
+print(conjuntob.difference(conjuntoa));
+print(conjuntoa.symmetric_difference(conjuntob));
+print(conjuntoa.issubset(conjuntob));
+print(conjuntob.issubset(conjuntoa));
+print(conjuntoa.issuperset(conjuntob));
+print(conjuntob.issuperset(conjuntoa));
+print(conjuntoa.isdisjoint(conjuntob));
+print(conjuntoa.isdisjoint(conjuntoc));
+conjuntoc.add(90);
+print(conjuntoc);
+conjuntoc.discard(90);
+print(conjuntoc);
+conjuntoc.pop();
+print(conjuntoc);
+conjuntoa.remove(2);
+print(conjuntoa);
+print( 4 in conjuntoa);
+print(conjuntoa);
+print(len(conjuntoa));
+conjuntod = {1,2,3,4,5,6,7,8,9};
+print(len(conjuntod));
