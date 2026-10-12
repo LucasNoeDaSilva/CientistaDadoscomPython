@@ -1,0 +1,42 @@
+CREATE TABLE usuarios (
+ id int,
+ nome varchar(255) not null COMMENT "nome do usuario",
+ email varchar(255) not null unique COMMENT "email do usuario",
+ data_nacismento date not null COMMENT "data de nascimento do usuario",
+ endereco varchar(255) not null COMMENT "endereço do usuario"
+ );
+ 
+ create table viagens.destinos(
+     id int,
+     nome varchar(255) not null unique COMMENT "nome do destino",
+     descricao VARCHAR(255) NOT null COMMENT "descricao do destino"
+ );
+ 
+ CREATE table viagens.reservas(
+	id int,
+    id_usuario int not null COMMENT "id do usuario referente a tabela do usuarios ",
+    id_destinos int not null COMMENT "id de detinos referente a tabela de destinos",
+     data date NOT null COMMENT "data da reserva feita",
+    status varchar(30) DEFAULT"pendente" not null COMMENT "status da reserva que pode ser: (pendente, concluida ou cancelada)"
+);
+insert INTO usuarios( id, nome,email,data_nacismento,endereco) VALUES (1,"lucas","lucas@gmail.com","2001-07-17","rua: lucas123");
+insert into destinos( id, nome, descricao) values (1,"holanda","paises baixos");
+insert into reservas( id, id_usuario,id_destinos,data) values (1,1,1,"2026-12-25");
+select * from usuarios;
+select * from usuarios WHERE id =1 OR nome LIKE"joao";
+
+UPDATE usuarios 
+SET endereco = "rua: dança cigana"
+WHERE id=1;
+
+drop table novos_usuarios;
+
+alter table usuarios MODIFY COLUMN id int PRIMARY KEY AUTO_INCREMENT not null;
+alter table destinos MODIFY COLUMN id int PRIMARY KEY AUTO_INCREMENT not null;
+alter table reservas MODIFY COLUMN id int PRIMARY KEY AUTO_INCREMENT not null;
+
+alter table usuarios MODIFY COLUMN id int AUTO_INCREMENT,
+add PRIMARY key(id)
+
+ALTER table reservas add CONSTRAINT fk_reservas_usuarios FOREIGN KEY (id_usuario) REFERENCES usuarios(id)
+ALTER table reservas add CONSTRAINT fk_reservas_destino FOREIGN KEY (id_destino) REFERENCES destinos(id)
