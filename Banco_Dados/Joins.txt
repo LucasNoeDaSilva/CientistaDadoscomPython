@@ -1,0 +1,26 @@
+SELECT * from usuarios us
+INNER JOIN reservas rs ON us.id = rs.id_usuario 
+INNER JOIN destinos dt ON dt.id = rs.id_destino;
+
+INSERT INTO usuarios(nome,email,data_nascimento,rua,numero,cidade) VALUES ("semreserva","semreservas@gmail.com","2001-07-17","rua: lucas123","333","sao paulo"); 
+
+SELECT * FROM usuarios us 
+LEFT JOIN reservas rs on us.id = rs.id_usuario;
+
+INSERT into destinos(nome, descricao) VALUES ("pavilhao japones", "no parque do ibirabuera");
+
+SELECT * from reservas rs
+RIGHT join destinos dt 
+on rs.id_destino = dt.id;
+
+SELECT * from destinos 
+WHERE id NOT IN (SELECT id_destino from reservas);
+
+
+
+SELECT * from usuarios
+where id not in (SELECT id_usuario FROM reservas);
+
+SELECT nome,(SELECT COUNT(*) from reservas WHERE id_usuario = usuarios.id) 
+AS totalreservas from usuarios;
+
