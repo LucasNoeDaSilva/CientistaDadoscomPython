@@ -1,5 +1,18 @@
-COUNT: conta a quantidade
-SUM: soma todos os valores de uma coluna
-AVG: soma a media dos valores de uma coluna
+COUNT: conta a quantidade.
+SUM: soma todos os valores de uma coluna.
+AVG: soma a media dos valores de uma coluna.
 MIN: pega o menor valor de uma coluna.
-MAX: pega o maior valor de uma coluna
+MAX: pega o maior valor de uma coluna.
+
+select COUNT(*) as total_usuarios from usuarios;
+
+select COUNT(*) as total_usuarios from usuarios us
+INNER JOIN reservas rs ON us.id = rs.id_usuario;
+
+SELECT MAX(TIMESTAMPDIFF(YEAR, data_nascimento, CURRENT_DATE())) as usuario_mais_velho
+from usuarios;
+insert into reservas(id_usuario, id_destino, data) VALUES (1,2,"2026-11-11")
+
+SELECT id_destino,COUNT(*)AS quantidade_reservas FROM reservas rs 
+GROUP BY rs.id_destino;
+
