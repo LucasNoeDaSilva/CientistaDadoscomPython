@@ -1,0 +1,11 @@
+alter TABLE usuarios
+add rua varchar(255)not null,
+add numero varchar(255) not null,
+add cidade varchar(50) not null;
+
+alter table usuarios
+drop COLUMN endereco;
+
+UPDATE usuarios
+SET rua="rua: dança cigana", numero="333", cidade="Sao Paulo"
+WHERE id =1;
