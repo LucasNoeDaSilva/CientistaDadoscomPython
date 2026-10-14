@@ -1,0 +1,5 @@
+COUNT: conta a quantidade
+SUM: soma todos os valores de uma coluna
+AVG: soma a media dos valores de uma coluna
+MIN: pega o menor valor de uma coluna.
+MAX: pega o maior valor de uma coluna
