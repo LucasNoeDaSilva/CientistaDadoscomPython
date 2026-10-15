@@ -1,0 +1,7 @@
+EXPLAIN
+SELECT * FROM usuarios WHERE nome = "lucas"
+
+CREATE INDEX idx_nome ON usuarios(nome);
+
+EXPLAIN
+SELECT * FROM usuarios WHERE nome = "lucas"
